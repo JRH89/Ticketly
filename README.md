@@ -2,6 +2,8 @@
 
 Ticketly is the independent sample SaaS repository used to exercise ForgeLoop against a realistic Spring Boot and React application. ForgeLoop is never coupled to this repository; it can target any registered repository.
 
+Ticketly contains only support-desk behavior: ticket creation, organization-scoped assignment, and assignment auditing. Delivery runs, agent telemetry, and verification evidence live in ForgeLoop's separate control plane and are intentionally not fabricated or displayed here.
+
 ## Run locally
 
 ```sh

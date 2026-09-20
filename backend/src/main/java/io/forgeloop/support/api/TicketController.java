@@ -7,7 +7,6 @@ import io.forgeloop.support.application.*; import io.forgeloop.support.domain.*;
  @QueryMapping public List<Ticket> tickets(){return tickets.findAll();}
  @QueryMapping public List<Member> organizationMembers(@Argument String organizationId){return members.findAll().stream().filter(m->m.getOrganization().getId().equals(organizationId)).toList();}
  @QueryMapping public List<AuditEvent> auditEvents(@Argument String ticketId){return audits.findByTicketIdOrderByOccurredAtDesc(ticketId);}
- @QueryMapping public DeliveryRun deliveryRun(@Argument String featureId){return DeliveryRun.demo(featureId);}
  @MutationMapping public Ticket assignTicket(@Argument String ticketId,@Argument String assigneeId,@ContextValue("actorId") String actorId){return assignments.assign(actorId,ticketId,assigneeId);}
  @MutationMapping public Ticket createTicket(@Argument String title,@ContextValue("actorId") String actorId){return creations.create(actorId,title);}
 }
