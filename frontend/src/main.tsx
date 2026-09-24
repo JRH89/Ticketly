@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import { useEffect, useState } from "react";
 import { AssignmentPanel } from "./AssignmentPanel";
 import { TicketComposer } from "./TicketComposer";
+import favicon from "./favicon.png";
 import {
   loadWorkspace,
   type Ticket,
@@ -41,8 +42,11 @@ function App() {
     <main>
       <header>
         <div>
-          <span className="brand">Ticketly</span>
-          <strong>Customer support workspace</strong>
+          <a className="brand" href="/">
+            <img src={favicon} alt="" />
+            <span>Ticketly</span>
+          </a>
+          <strong className="header-context">Customer support workspace</strong>
         </div>
         <span className="badge">Local demo · API healthy</span>
       </header>

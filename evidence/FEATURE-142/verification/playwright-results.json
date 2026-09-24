@@ -1,0 +1,151 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Users\\jrh89\\AppData\\Local\\Programs\\nodejs\\node-v24.20.0-win-x64\\node.exe",
+      "C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/jrh89/Work/Ticketly/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/jrh89/Work/Ticketly/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/jrh89/Work/Ticketly/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../evidence/FEATURE-142/verification/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 12,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ticket-assignment.spec.ts",
+      "file": "ticket-assignment.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "shows evidence-backed delivery and supports ticket creation and assignment",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5095,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Ticket Assignment' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Ticket Assignment' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Ticket Assignment' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Ticket Assignment' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Ticket Assignment' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Ticket Assignment' })\u001b[22m\n\n    at C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\e2e\\ticket-assignment.spec.ts:2:187",
+                    "location": {
+                      "file": "C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\e2e\\ticket-assignment.spec.ts",
+                      "column": 187,
+                      "line": 2
+                    },
+                    "snippet": "  1 | import {test,expect} from '@playwright/test';\n> 2 | test('shows evidence-backed delivery and supports ticket creation and assignment',async({page})=>{await page.goto('/');await expect(page.getByRole('heading',{name:'Ticket Assignment'})).toBeVisible();await expect(page.getByText('Parallel agent runs')).toBeVisible();await page.getByRole('button',{name:'Support Desk'}).click();await page.getByLabel('New ticket').fill('Example customer issue');await page.getByRole('button',{name:'Create'}).click();await expect(page.getByText('Example customer issue')).toBeVisible();await page.getByLabel('Assigned to').selectOption('member-1');await expect(page.getByText('Assigned to Morgan Member')).toBeVisible();await expect(page.getByText('Audit timeline')).toBeVisible();await page.getByRole('button',{name:'Evidence'}).click();await expect(page.getByText('Verification gates')).toBeVisible();});\n    |                                                                                                                                                                                           ^\n  3 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\e2e\\ticket-assignment.spec.ts",
+                        "column": 187,
+                        "line": 2
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Ticket Assignment' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Ticket Assignment' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Ticket Assignment' })\u001b[22m\n\n\n  1 | import {test,expect} from '@playwright/test';\n> 2 | test('shows evidence-backed delivery and supports ticket creation and assignment',async({page})=>{await page.goto('/');await expect(page.getByRole('heading',{name:'Ticket Assignment'})).toBeVisible();await expect(page.getByText('Parallel agent runs')).toBeVisible();await page.getByRole('button',{name:'Support Desk'}).click();await page.getByLabel('New ticket').fill('Example customer issue');await page.getByRole('button',{name:'Create'}).click();await expect(page.getByText('Example customer issue')).toBeVisible();await page.getByLabel('Assigned to').selectOption('member-1');await expect(page.getByText('Assigned to Morgan Member')).toBeVisible();await expect(page.getByText('Audit timeline')).toBeVisible();await page.getByRole('button',{name:'Evidence'}).click();await expect(page.getByText('Verification gates')).toBeVisible();});\n    |                                                                                                                                                                                           ^\n  3 |\n    at C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\e2e\\ticket-assignment.spec.ts:2:187"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-22T19:44:47.963Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\test-results\\ticket-assignment-shows-ev-ec452-ket-creation-and-assignment\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jrh89\\Work\\Ticketly\\frontend\\e2e\\ticket-assignment.spec.ts",
+                    "column": 187,
+                    "line": 2
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "711773ef55714fff20df-cded0abc990066c3641c",
+          "file": "ticket-assignment.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-22T19:44:47.676Z",
+    "duration": 5489.111,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

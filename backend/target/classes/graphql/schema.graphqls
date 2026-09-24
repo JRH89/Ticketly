@@ -1,0 +1,5 @@
+type Query { ticket(id: ID!): Ticket!, tickets: [Ticket!]!, organizationMembers(organizationId: ID!): [Member!]!, auditEvents(ticketId: ID!): [AuditEvent!]! }
+type Mutation { assignTicket(ticketId: ID!, assigneeId: ID!): Ticket, createTicket(title: String!): Ticket! }
+type Ticket { id: ID!, title: String!, status: String!, organizationId: ID!, assignee: Member }
+type Member { id: ID!, displayName: String!, role: String! }
+type AuditEvent { action: String!, ticketId: ID!, actorId: ID!, assigneeId: ID!, occurredAt: String! }
